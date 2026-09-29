@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.merkurius_endy.Pertemuan_3.ThirdResultActivity
 import com.example.merkurius_endy.Pertemuan_4.FourthActivity
+import com.example.merkurius_endy.Pertemuan_5.FifthActivity
 import com.example.merkurius_endy.databinding.ActivityMainBinding
 import com.example.merkurius_endy.databinding.ActivityThirdBinding
 
@@ -37,6 +38,12 @@ class MainActivity : AppCompatActivity() {
 // jadi finish nya di hapus saja
 //            finish() // Activity lama dihapus dari stack
         }
+
+        binding.btnToFifth.setOnClickListener {
+            val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
+        }
+
     }
     override fun onStart() {
         super.onStart()
