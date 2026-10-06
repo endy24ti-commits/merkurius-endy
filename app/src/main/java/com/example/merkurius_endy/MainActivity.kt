@@ -12,6 +12,7 @@ import com.example.merkurius_endy.Pertemuan_4.FourthActivity
 import com.example.merkurius_endy.Pertemuan_5.FifthActivity
 import com.example.merkurius_endy.databinding.ActivityMainBinding
 import com.example.merkurius_endy.databinding.ActivityThirdBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -26,6 +27,9 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        //Kode ini harus selalu di panggil saat butuh akses "user_pref"
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
         binding.btnToFourth.setOnClickListener {
             val intent = Intent(this, FourthActivity::class.java)
 
@@ -42,6 +46,27 @@ class MainActivity : AppCompatActivity() {
         binding.btnToFifth.setOnClickListener {
             val intent = Intent(this, FifthActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.btnLogout.setOnClickListener {
+            MaterialAlertDialogBuilder(this)
+                .setTitle(("Konfirmasi"))
+                .setMessage("Apakah anda yakin ingin logout?")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    //clear SP
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+
+                    dialog.dismiss()
+                    val intent = Intent(this, AuthActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+                .setNegativeButton("Batal") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .show()
         }
 
     }
