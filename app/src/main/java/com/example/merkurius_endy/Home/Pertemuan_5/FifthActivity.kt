@@ -1,4 +1,4 @@
-package com.example.merkurius_endy.Pertemuan_5
+package com.example.merkurius_endy.Home.Pertemuan_5
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,9 +11,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.merkurius_endy.R
 import com.example.merkurius_endy.databinding.ActivityFifthBinding
-import com.example.merkurius_endy.databinding.ActivityFourthBinding
-import com.example.merkurius_endy.databinding.ActivityMainBinding
-import com.example.merkurius_endy.databinding.ActivityThirdBinding
 
 class FifthActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFifthBinding

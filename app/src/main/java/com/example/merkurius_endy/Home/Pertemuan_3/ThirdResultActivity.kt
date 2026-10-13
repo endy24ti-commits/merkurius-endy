@@ -1,4 +1,4 @@
-package com.example.merkurius_endy.Pertemuan_3
+package com.example.merkurius_endy.Home.Pertemuan_3
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

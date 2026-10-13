@@ -7,11 +7,10 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.merkurius_endy.Pertemuan_3.ThirdResultActivity
-import com.example.merkurius_endy.Pertemuan_4.FourthActivity
-import com.example.merkurius_endy.Pertemuan_5.FifthActivity
+import com.example.merkurius_endy.Home.Pertemuan_4.FourthActivity
+import com.example.merkurius_endy.Home.Pertemuan_5.FifthActivity
+import com.example.merkurius_endy.Home.Pertemuan_6.SixthActivity
 import com.example.merkurius_endy.databinding.ActivityMainBinding
-import com.example.merkurius_endy.databinding.ActivityThirdBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -45,6 +44,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnToFifth.setOnClickListener {
             val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToSixth.setOnClickListener {
+            val intent = Intent(this, SixthActivity::class.java)
             startActivity(intent)
         }
 

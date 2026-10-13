@@ -1,4 +1,4 @@
-package com.example.merkurius_endy.Pertemuan_5
+package com.example.merkurius_endy.Home.Pertemuan_5
 
 import android.os.Bundle
 import android.webkit.WebViewClient

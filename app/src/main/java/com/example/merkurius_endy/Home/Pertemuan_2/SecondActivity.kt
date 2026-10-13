@@ -1,4 +1,4 @@
-package com.example.merkurius_endy.Pertemuan_2
+package com.example.merkurius_endy.Home.Pertemuan_2
 
 import android.os.Bundle
 import android.util.Log
