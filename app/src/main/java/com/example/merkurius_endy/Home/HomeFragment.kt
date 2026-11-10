@@ -12,6 +12,8 @@ import com.example.merkurius_endy.AuthActivity
 import com.example.merkurius_endy.Home.Pertemuan_4.FourthActivity
 import com.example.merkurius_endy.Home.Pertemuan_5.FifthActivity
 import com.example.merkurius_endy.Home.Pertemuan_6.SixthActivity
+import com.example.merkurius_endy.Pertemuan_10.TenthActivity
+import com.example.merkurius_endy.Pertemuan_11.EleventhActivity
 import com.example.merkurius_endy.R
 import com.example.merkurius_endy.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -56,6 +58,16 @@ class HomeFragment : Fragment() {
         }
         binding.btnToSixth.setOnClickListener {
             val intent = Intent(requireContext(), SixthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToTenth.setOnClickListener {
+            val intent = Intent(requireContext(), TenthActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnToEleventh.setOnClickListener {
+            val intent = Intent(requireContext(), EleventhActivity::class.java)
             startActivity(intent)
         }
 
