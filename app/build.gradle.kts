@@ -1,5 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
+    //Pertemuan 12
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -45,6 +47,11 @@ dependencies {
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("com.tbuonomo:dotsindicator:5.1.0")
+    //Data Pertemuan 13
+    val room_version = "2.7.0"
+    implementation("androidx.room:room-runtime:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+    ksp ("androidx.room:room-compiler:$room_version")
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.constraintlayout)

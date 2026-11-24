@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.merkurius_endy.Home.HomeFragment
 import com.example.merkurius_endy.Message.MessageFragment
 import com.example.merkurius_endy.More.MoreFragment
+import com.example.merkurius_endy.Note.NoteFragment
 import com.example.merkurius_endy.databinding.ActivityBaseBinding
 
 class BaseActivity : AppCompatActivity() {
@@ -54,6 +55,10 @@ class BaseActivity : AppCompatActivity() {
                 }
                 R.id.more -> {
                     replaceFragment(MoreFragment())
+                    true
+                }
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
                     true
                 }
                 else ->false
